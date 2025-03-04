@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" onclick="reload()" class="news-logo">
+          <h2 id="news-logo">Breaking News</h2>
+        </a>
+        <div class="nav-links">
+          <ul class="flex">
+            <li
+              class="hover-link nav-items"
+              id="technology"
+              onclick="onNavItemClick ('technology')"
+            >
+              Technology
+            </li>
+            <li
+              class="hover-link nav-items"
+              id="ipl"
+              onclick="onNavItemClick ('ipl')"
+            >
+              IPL
+            </li>
+            <li
+              class="hover-link nav-items"
+              id="finance"
+              onclick="onNavItemClick ('finance')"
+            >
+              Finance
+            </li>
+            <li
+              class="hover-link nav-items"
+              id="politics"
+              onclick="onNavItemClick ('politics')"
+            >
+              Politics
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input
+            id="search-text"
+            type="text"
+            class="news-input"
+            placeholder="Latest News"
+          />
+          <button id="search-button" class="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img src="#" alt="news-image" id="news-img" />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">this is the title</h3>
+          <h6 class="news-source" id="news-source">times now 04/03/2025</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+            accusantium nostrum excepturi, quod, beatae eaque quam laudantium ut
+            fugiat sequi minima enim assumenda earum deleniti veniam, libero
+            tenetur laboriosam repellat quos reprehenderit voluptatibus.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <footer>
+      <p>&copy; 2025 Prithijit <strong>News Website.</strong></p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
