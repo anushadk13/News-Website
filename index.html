@@ -7,54 +7,40 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <div class="main-nav container flex">
-        <a href="#" onclick="reload()" class="news-logo">
-          <h2 id="news-logo">Breaking News</h2>
-        </a>
-        <div class="nav-links">
-          <ul class="flex">
-            <li
-              class="hover-link nav-items"
-              id="technology"
-              onclick="onNavItemClick ('technology')"
-            >
-              Technology
-            </li>
-            <li
-              class="hover-link nav-items"
-              id="ipl"
-              onclick="onNavItemClick ('ipl')"
-            >
-              IPL
-            </li>
-            <li
-              class="hover-link nav-items"
-              id="finance"
-              onclick="onNavItemClick ('finance')"
-            >
-              Finance
-            </li>
-            <li
-              class="hover-link nav-items"
-              id="politics"
-              onclick="onNavItemClick ('politics')"
-            >
-              Politics
-            </li>
-          </ul>
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Left: Hamburger Menu + Logo -->
+        <div class="nav-left">
+          <button class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <a href="#" class="news-logo">
+            <span class="logo-highlight">📰 News</span> Portal
+          </a>
         </div>
-        <div class="search-bar flex">
-          <input
-            id="search-text"
-            type="text"
-            class="news-input"
-            placeholder="Latest News"
-          />
-          <button id="search-button" class="search-button">Search</button>
+    
+        <!-- Center: Navigation Links -->
+        <ul class="nav-links">
+          <li class="nav-item">World</li>
+          <li class="nav-item">Business</li>
+          <li class="nav-item">Tech</li>
+          <li class="nav-item">Sports</li>
+          <li class="nav-item">Health</li>
+          <li class="nav-item">Entertainment</li>
+        </ul>
+    
+        <!-- Right: Icons + Search + Sign-in -->
+        <div class="nav-right">
+          <i class="far fa-clock"></i> Watch
+          <i class="fas fa-headphones"></i> Listen
+          <span class="live-dot"></span> Live TV
+          <i class="fas fa-search search-icon"></i>
+          <button class="sign-in">Sign In</button>
         </div>
       </div>
     </nav>
+    
+    
 
     <main>
       <div class="cards-container container flex" id="cards-container"></div>
